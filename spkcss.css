@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('spk1.png');
+    background-color: #f7f7f7;
+}
+
+/* Set max width for the game container */
+.container {
+    max-zoom: 100%;
+    margin: 0 auto;
+    display: contents;
+    padding: 20px;
+    background-color: transparent;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: saddlebrown;
+}
+
+/* Style the result message */
+b {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Style the button */
+.btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Make the heading responsive */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Make the container responsive */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+/* Define the paper blast animation */
+/* Define the paper blast animation */
+@keyframes paper-blast {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+/* Style the result message */
+b {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #333;
+    position: relative;
+    /* Add position relative */
+    animation: paper-blast 1s ease-in-out;
+}
+
+/* Add different colors to the paper blast */
+b:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border-radius: 100%;
+    /*z-index: -1;*/
+    /* Remove z-index */
+    animation: paper-blast 1s ease-in-out;
+}
+
+/* Define the colors for the paper blast */
+b:after:nth-child(1) {
+    background-color: #ff5733;
+    animation-delay: 0.1s;
+}
+
+b:after:nth-child(2) {
+    background-color: #ffdc34;
+    animation-delay: 0.2s;
+}
+
+b:after:nth-child(3) {
+    background-color: #4caf50;
+    animation-delay: 0.3s;
+}
+
+b:after:nth-child(4) {
+    background-color: #2196f3;
+    animation-delay: 0.4s;
+}
+
+b:after:nth-child(5) {
+    background-color: #8e44ad;
+    animation-delay: 0.5s;
+}
+
+b:after:nth-child(6) {
+    background-color: #34495e;
+    animation-delay: 0.6s;
+}
